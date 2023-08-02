@@ -46,36 +46,13 @@ recognition.onresult = function(event) {
 }
 
 function setup() {
-  screenWidth = window.innerWidth;
-  screenHeight = window.innerHeight;
 
-  canvas = createCanvas(screenWidth, screenHeight-150);
-  canvas.position(0,150);
 }
 
 function draw() {
-  if(drawApple == "set")
-  {
-    for(var i = 1 ; i <= toNumber; i++)
-    {console.log("teste");
-      x = Math.floor(Math.random() * screenWidth);
-      y = Math.floor(Math.random() * (screenHeight-150));
-      image(apple, x, y, 50, 50);
-      
-    }
-    document.getElementById("status").innerHTML = toNumber + " maçãs desenhadas";
-    speakData = toNumber + " maçãs desenhadas";
-    speak();
-    drawApple = "";
+ 
+   
   }
 }
 
-function speak(){
-    var synth = window.speechSynthesis;
 
-    var utterThis = new SpeechSynthesisUtterance(speakData);
-
-    synth.speak(utterThis);
-
-    speakData = "";
-}
